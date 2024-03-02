@@ -12,11 +12,11 @@ class PdfViewerScreen extends StatelessWidget {
     
     return Scaffold(
         appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.inverseSurface,
         title: const Text('Pdf Viewer'),
       ),
       body: const PDF(swipeHorizontal: false, fitEachPage: true,
-      fitPolicy: FitPolicy.BOTH,enableSwipe: true,
+      fitPolicy: FitPolicy.BOTH,enableSwipe: true, nightMode: true, autoSpacing: true
       ).cachedFromUrl(url,
       errorWidget: (error) => const Center(
         child:  Text('Unable to load pdf. Sorry for the inconvenience caused. Please do check the url once and retry.'),
